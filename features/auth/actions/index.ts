@@ -12,6 +12,7 @@ export async function signInWithGithub(formData: FormData) {
   const redirectTo = getSafeCallbackPath(
     typeof callback === "string" ? callback : null
   );
+
   const result = await auth.api.signInSocial({
     body: {
       provider: "github",
